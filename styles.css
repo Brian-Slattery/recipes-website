@@ -23,9 +23,8 @@ html {
 #topBackgroundContainer{
     position: sticky;
     top: 0;
-    background-color: rgb(47, 64, 49);
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+    background-image: url(photos/Wood.jpeg);
+    z-index: 1;
 }
 
 #topContainer{
@@ -161,3 +160,99 @@ html {
     margin: 0;
 }
 
+/**info Panel**/
+#intoPanelContainer{
+    background-image: url(photos/Wood.jpeg);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 175px;
+    border-bottom-right-radius: 175px;
+    filter: drop-shadow(10px 10px 9px rgb(0, 0, 0));
+    z-index: 2;
+}
+
+/**time and title stuff**/
+#titleAndTimeContainer{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0px;
+}
+
+#titlecontainer{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+#title{
+    text-align: center;
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+    color: aliceblue;
+    font-size: 100px;
+    padding-left: 35%;
+    margin-bottom: 0px;
+}
+
+#timeContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+#time{
+    color: aliceblue;
+    font-size: 30px;
+    align-self: center;
+    margin-bottom: 0px;
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+}
+
+#clockImage{
+    border-top: 2px solid aliceblue;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 0px;
+    display: inline-block;
+    filter: drop-shadow(10px 10px 9px rgb(0, 0, 0));
+}
+
+/**text and dropdown**/
+
+#textAndDropdownContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#emptyContainer{
+    width: 25%;
+}
+
+#textContainer{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    border-top: 5px solid aliceblue;
+}
+
+#textTitle{
+    text-align: center;
+    font-size: 40px;
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+    color: aliceblue;
+}
+
+#maintext{
+    margin-top: 0px;
+    text-align: center;
+    font-size: 30px;
+    color: aliceblue;
+    filter: drop-shadow(5px 5px 4px rgb(0, 0, 0));
+}
+
+#dropdownImageButton{
+    width: 70px;
+    filter: drop-shadow(10px 10px 9px rgb(0, 0, 0));
+}
