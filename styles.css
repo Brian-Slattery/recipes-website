@@ -16,6 +16,8 @@ html {
   }
 
   body{
+    background-image: url(photos/marble.png);
+    background-size:100%;
     height: 5000px;
   }
 
@@ -160,7 +162,7 @@ html {
     margin: 0;
 }
 
-/**info Panel**/
+/**into Panel**/
 #intoPanelContainer{
     background-image: url(photos/Wood.jpeg);
     width: 100%;
@@ -255,4 +257,149 @@ html {
 #dropdownImageButton{
     width: 70px;
     filter: drop-shadow(10px 10px 9px rgb(0, 0, 0));
+    cursor: pointer;
 }
+
+/** main Content**/
+
+#mainContentContainer{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+
+/**ad Space**/
+#ad{
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    border-radius: 20px;
+    border: 2px solid white;
+    filter: drop-shadow(10px 10px 9px rgb(0, 0, 0));
+}
+
+/**instruction Panel**/
+
+#instructionPanelContainer{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(photos/Wood.jpeg);
+    border-radius: 40px;
+    filter: drop-shadow(10px 10px 9px rgb(0, 0, 0));
+}
+
+/**Top of instruction Panel**/
+#topOfInstructPanel{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    filter: drop-shadow(10px 10px 9px rgb(0, 0, 0));
+}
+
+#ingredientsButtonContainer, #instructionsButtonContainer{
+    display: flex;
+    background-color: rgb(47, 64, 49);
+    color: aliceblue;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+    border: 2px solid aliceblue;
+
+}
+
+#ingredientsButtonContainer{
+    border-top-left-radius: 40px;
+}
+
+#instructionsButtonContainer{
+    border-top-right-radius: 40px;
+}
+
+.buttonText{
+    text-align: center;
+    font-size: 35px;
+}
+
+/** bottom of instruction Panel**/
+
+#contentContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0%;
+}
+
+#stepTitle{
+    font-size: 40px;
+    color:aliceblue;
+    margin-bottom: 0px;
+    filter: drop-shadow(5px 5px 4px rgb(0, 0, 0));
+}
+
+#arrowAndPageNumberContainer{
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#pageNumber{
+    color: aliceblue;
+    font-size: 30px;
+    align-self: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    filter: drop-shadow(5px 5px 4px rgb(0, 0, 0));
+}
+
+#previousPage,#nextPage{
+    width: 60px;
+    filter: drop-shadow(5px 5px 4px rgb(0, 0, 0));
+    cursor: pointer;
+}
+
+#instructTextContainer{
+    padding: 20px;
+    display: flex;
+    text-align: center;
+}
+
+#instructText{
+    filter: drop-shadow(5px 5px 4px rgb(0, 0, 0));
+    font-size: 30px;
+    color: aliceblue;
+    padding-bottom: 15px;
+    border-bottom: 2px solid aliceblue;
+}
+
+#stepIngredsContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.ingredContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: aliceblue;
+    filter: drop-shadow(5px 5px 4px rgb(0, 0, 0));
+    margin: 0%;
+}
+
+.ingredPhoto{
+    max-width: 100%;
+    margin-top: 0px;
+}
+
+.ingredTitles{
+    margin-bottom: 0px;
+}
+
