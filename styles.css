@@ -403,3 +403,53 @@ html {
     margin-bottom: 0px;
 }
 
+/**FAQ panel**/
+
+#faqContainer{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(photos/Wood.jpeg);
+    border-radius: 40px;
+    filter: drop-shadow(10px 10px 9px rgb(0, 0, 0));
+    margin-bottom: 50px;
+}
+
+#topOfFaqPanel{
+    display: flex;
+    background-color: rgb(47, 64, 49);
+    color: aliceblue;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    border: 2px solid aliceblue;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    filter: drop-shadow(10px 10px 9px rgb(0, 0, 0));
+}
+
+#FAQText{
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.FAQOption{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 30px;
+    margin-bottom: 0px;
+    text-align:start;
+    text-decoration: underline;
+    color: aliceblue;
+    filter: drop-shadow(5px 5px 4px rgb(0, 0, 0));
+
+}
+
+.FAQAnswer{
+    font-size: 25px;
+    color: aliceblue;
+    filter: drop-shadow(5px 5px 2px rgb(0, 0, 0));
+
+}
