@@ -95,3 +95,20 @@
     filter: drop-shadow(10px 10px 9px rgb(0, 0, 0));
     cursor: pointer;
 }
+
+
+@media (max-width:1000px){
+    #clockImage{
+        width: 100px;
+    }
+
+    #titleAndTimeContainer{
+        padding: 10px;
+    }
+}
+
+@media (max-width:500px){
+    #clockImage{
+        width: 70px;
+    }
+}

@@ -154,3 +154,28 @@
     width: 25px;
     filter: drop-shadow(5px 5px 4px rgb(0, 0, 0));
 }
+
+@media (max-width:1000px){
+    .profilePic{
+        width: 90px;
+        padding: 0px;
+    }
+
+    .topOfComment{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        padding-left: 0px;
+        }
+
+    .commentText{
+        padding: 10px;
+    }
+
+    .commentName{
+        margin-top: 5px;
+        font-size: 25px;
+        padding-right: 0px;
+    }
+}

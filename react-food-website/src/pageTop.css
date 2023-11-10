@@ -1,7 +1,14 @@
-#topBackgroundContainer{
+.normalBackground{
     position: sticky;
     top: 0;
     background-image: url(photos/Wood.jpeg);
+    z-index: 1;
+}
+
+.topBackgroundContainerScrolled{
+    position: sticky;
+    top: 0;
+    background-image: none;
     z-index: 1;
 }
 
@@ -94,6 +101,13 @@
     align-self: end;
 }
 
+#dropdownbutton2 img{
+    max-width: 50px;
+    align-self: flex-end;
+    cursor: pointer;
+    display: none;      
+}
+
 #dropdownButton img{
     max-width: 50px;
     align-self: flex-end;
@@ -110,11 +124,13 @@
     width: 100%;
     background-color: rgb(47, 64, 49);
     justify-content: center;
+    z-index: 0;
 }
 
 #block1, #block2, #block3{
     width: 33%;
     text-align: center;
+    padding: 3px;
     font-size: 30px;
     color: aliceblue;
     border: 2px solid aliceblue;
@@ -135,5 +151,80 @@
     font-size: 30px;
     display: inline-block;
     padding: 20px;
-    margin: 0;
+    margin-top: 0px;
+}
+
+@media (max-width:1000px){
+
+    #breakfastLink img, #lunchLink img,#dinnerLink img, #dessertLink img{
+        max-width: 50px;
+    }
+
+    #searchbar{
+        display: none;
+    }
+
+    #dropdownButton{
+        display: none;
+    }
+
+    #searchbarAndDropdownContainer2{
+        display: flex; /* You need to change the display property of the container */
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    #searchbarContainer2{
+        display: flex;
+        width: 400px;
+        margin: auto;
+    }
+
+    #searchbar2{
+    font-size: 20px;
+    width: 100%;
+    border-radius: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(47, 64, 49);
+    color: aliceblue;
+    }
+
+    #dropdownbutton2 img{
+        display:block;
+        justify-items: flex-start;
+    }
+
+    .dropOp{
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    #block1,#block3,#block2{
+        font-size: 25px;
+    }
+
+
+}
+
+@media (max-width:500px){
+
+    #logoLink img{
+        max-width: 300px;
+        padding: 20px;
+        filter: drop-shadow(10px 10px 9px rgb(47, 64, 49));
+    }
+
+    #navigationButtonsContainer{
+        margin: auto;
+    }
+
+    #dropdownbutton2 img{
+        display:none;
+    }
+
+    #mealTypeButtonContainer{
+        display: none;
+    }
+
 }

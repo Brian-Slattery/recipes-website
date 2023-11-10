@@ -1,9 +1,28 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './pageTop.css';
 
 function PageTop() {
+
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const onScroll = () => {
+            const changePoint = 50;
+            setScrolled(window.scrollY > changePoint);
+        };
+
+        window.addEventListener('scroll', onScroll);
+
+        return () => {
+            window.removeEventListener('scroll', onScroll);
+        };
+    }, []);
+
+    const backgroundClassName = scrolled ? 'topBackgroundContainerScrolled' : 'normalBackground';
+
     return (
-    <div id="topBackgroundContainer">
+        
+    <div id="topBackgroundContainer" className={backgroundClassName}>
     <div id="topContainer">
 
         <div id="navigationButtonsContainer">
@@ -64,11 +83,11 @@ function PageTop() {
 
             <div id="searchbarContainer2">
                 <div id="searchbarImage"></div>
-                <input type="text" id="searchbar" placeholder="search"/>
+                <input type="text" id="searchbar2" placeholder="search"/>
             </div>
 
-            <div id="dropdownbutton">
-                <img src="" alt=""/>
+            <div id="dropdownbutton2">
+                <img src="photos/icon4.PNG" alt=""/>
             </div>
 
         </div>
