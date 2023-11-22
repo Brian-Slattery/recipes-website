@@ -29,6 +29,7 @@
     justify-content: center;
     width: 50%;
     border: 2px solid aliceblue;
+    cursor: pointer;
 
 }
 
@@ -47,7 +48,7 @@
 
 /** bottom of instruction Panel**/
 
-#contentContainer{
+#contentContainer, #instructionContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,4 +120,22 @@
 
 .ingredTitles{
     margin-bottom: 0px;
+}
+
+#ingredientsText{
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.ingred{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 30px;
+    margin-bottom: 0px;
+    text-align:start;
+    color: aliceblue;
+    filter: drop-shadow(5px 5px 4px rgb(0, 0, 0));
+
 }

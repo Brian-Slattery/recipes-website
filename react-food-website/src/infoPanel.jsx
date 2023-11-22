@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './infoPanel.css';
 
 function InfoPanel(){
+
+    const mainText = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, doloribus ex fuga dicta architecto obcaecati illum quia veritatis! Inventore fugiat praesentium dicta expedita excepturi sed alias eveniet perferendis sunt hic?"
+    const mainText2 = ""
+
+    const [ismaintextClosed, setIsmaintextClosed] = useState(false);
+
+    const toggleMaintext = () => {
+        setIsmaintextClosed(!ismaintextClosed);
+    };
+
     return (
         <div id="intoPanelContainer">
                 <div id="titleAndTimeContainer">
@@ -18,13 +28,11 @@ function InfoPanel(){
                     <div id="emptyContainer"></div>
                     <div id="textContainer">
                         <h2 id="textTitle">Chicago Deep Dish Pizza</h2>
-                        <p id="maintext">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, doloribus ex fuga
-                            dicta architecto obcaecati illum quia veritatis! Inventore fugiat praesentium dicta expedita
-                            excepturi sed alias eveniet perferendis sunt hic?</p>
+                        <p id="maintext">{ismaintextClosed ? mainText2 : mainText}</p>
                     </div>
                     <div id="textDropdownContainer">
-                        <div id="dropdownImageContainer">
-                            <img src="photos/icon4.PNG" alt="" id="dropdownImageButton"/>
+                        <div id="dropdownImageContainer" onClick={toggleMaintext}>
+                            <img src="photos/icon4.PNG" alt="" id="dropdownImageButton" />
                         </div>
                     </div>
                 </div>

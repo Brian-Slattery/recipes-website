@@ -12,6 +12,10 @@
     z-index: 1;
 }
 
+.newBackground {
+    background-image: none;
+    background-color: rgb(47, 64, 49);}
+
 #topContainer{
     display: flex;
     flex-direction: column;
@@ -120,7 +124,7 @@
 }
 
 #dropdownMenu{
-    display: none;
+    display: flex;
     width: 100%;
     background-color: rgb(47, 64, 49);
     justify-content: center;
