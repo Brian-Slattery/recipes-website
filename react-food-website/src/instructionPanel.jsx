@@ -9,8 +9,10 @@ function Instructions (){
             pageNumber: 1,
             instructText: "Step 1 instructions...",
             ingreds: [
-                { title: "1 Cup Flour", imageSrc: "photos/icon2.PNG" },
-                { title: "1 1/2 teaspoon sugar", imageSrc: "photos/icon1.PNG" }
+                { id: 'flour1', title: "1 Cup Flour", imageSrc: "photos/icon2.PNG" },
+                { id: 'sugar1', title: "1 1/2 teaspoon sugar", imageSrc: "photos/icon1.PNG" },
+                { id: 'flour2', title: "1 Cup Flour", imageSrc: "photos/icon2.PNG" },
+                
             ]
         },
         {
@@ -18,8 +20,9 @@ function Instructions (){
             pageNumber: 2,
             instructText: "Step 2 instructions...",
             ingreds: [
-                { title: "1 tablespoon oil", imageSrc: "photos/icon2.PNG" },
-                { title: "2 cups of water", imageSrc: "photos/icon1.PNG" }
+                { id: 'oil1', title: "1 tablespoon oil", imageSrc: "photos/icon2.PNG" },
+                { id: 'water1', title: "2 cups of water", imageSrc: "photos/icon1.PNG" },
+
             ]
         },
         {
@@ -75,11 +78,11 @@ function Instructions (){
         <div id="stepIngredsContainer">
 
         {currentStep.ingreds.map(ingred => (
-                                <div className="ingredContainer" key={ingred.title}>
-                                    <h2 className="ingredTitles">{ingred.title}</h2>
-                                    <img src={ingred.imageSrc} alt="" className="ingredPhoto"/>
-                                </div>
-                            ))}
+        <div className="ingredContainer" key={ingred.id}>
+            <h2 className="ingredTitles">{ingred.title}</h2>
+            <img src={ingred.imageSrc} alt="" className="ingredPhoto"/>
+        </div>
+    ))}
 
 
         </div>
