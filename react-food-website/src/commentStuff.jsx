@@ -28,7 +28,7 @@ const commentsData = [
 ]
 
 function CommentPanel() {
-    const [comments, setComments] = useState(commentsData);
+    const [comments, setComments] = useState([]);
 
     useEffect(() => {
         axios.get('http://localhost:3001/api/comments')
@@ -97,6 +97,26 @@ function CommentPanel() {
 
             <div id="commentsContainer">
                 <div id="comments">
+
+                {commentsData.map((comment, index) => (
+                        <div className="comment" key={index}>
+                            <div className="topOfComment">
+                                <img src={comment.profilePicSrc} alt="" className="profilePic"/>
+                                <p className="commentName">{comment.name}</p>
+                                <div className="starRating">
+                                    {Array.from({ length: comment.rating }, (_, i) => (
+                                        <img key={i} src="photos/star.png" alt="" className="star"/>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="bottomOfComment">
+                                <p className="commentText">{comment.commentText}</p>
+                                <img src={comment.reviewPhoto} class="commentPhoto"/>
+                            </div>
+                        </div>
+                    ))}
+
+
                 {comments.map((comment, index) => (
                         <div className="comment" key={index}>
                             <div className="topOfComment">
@@ -114,6 +134,7 @@ function CommentPanel() {
                             </div>
                         </div>
                     ))}
+
                 </div>
             </div>
         </div>
