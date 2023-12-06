@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
-import PageLayout from './pageLayout';
+import PizzaPage from './PizzaPage';
 
-ReactDOM.render(<PageLayout/>, document.getElementById('root'));
+ReactDOM.render(<PizzaPage/>, document.getElementById('root'));
 
