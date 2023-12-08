@@ -18,10 +18,15 @@ function PizzaPage(){
             clockImg={PizzaData.clockImg}
             />
             <Ad/>
-            <Instructions/>
-            <FAQPanel/>
+            <Instructions
+            CookingSteps={PizzaData.CookingSteps}
+            IngredientsList={PizzaData.IngredientsList} />
+            <FAQPanel 
+            FaQs={PizzaData.FaQs} />
             <Ad/>
-            <CommentPanel/>
+            <CommentPanel 
+            recipeId={PizzaData.id}
+            CommentsData={PizzaData.CommentsData} />
         </div>
     );
 }

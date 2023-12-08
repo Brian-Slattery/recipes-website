@@ -14,18 +14,27 @@ mongoose.connect('mongodb://localhost:27017/mydatabase', { useNewUrlParser: true
     name: String,
     commentText: String,
     profilePicSrc: String,
-    rating: Number
+    rating: Number,
+    recipeId: String
 });
 
 const Comment = mongoose.model('Comment', CommentSchema);
 
-app.get('/api/comments', async (req, res) => {
-    const comments = await Comment.find();
-    res.send(comments);
+
+app.get('/api/comments/:recipeId', async (req, res) => {
+    const { recipeId } = req.params;
+    try {
+        const comments = await Comment.find({ recipeId });
+        res.json(comments);
+    } catch (error) {
+        res.status(500).send('Server error');
+    }
 });
 
-app.post('/api/comments', async (req, res) => {
-    const comment = new Comment(req.body);
+app.post('/api/comments/:recipeId', async (req, res) => {
+    const recipeId = req.params.recipeId;
+    const commentData = { ...req.body, recipeId }; 
+    const comment = new Comment(commentData);
     await comment.save();
     res.send(comment);
 });

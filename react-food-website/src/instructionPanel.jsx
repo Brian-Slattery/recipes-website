@@ -1,43 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './instructionPanel.css';
 
-function Instructions (){
-
-    const steps = [
-        {
-            stepTitle: "Step 1",
-            pageNumber: 1,
-            instructText: "Step 1 instructions...",
-            ingreds: [
-                { id: 'flour1', title: "1 Cup Flour", imageSrc: "photos/icon2.PNG" },
-                { id: 'sugar1', title: "1 1/2 teaspoon sugar", imageSrc: "photos/icon1.PNG" },
-                { id: 'flour2', title: "1 Cup Flour", imageSrc: "photos/icon2.PNG" },
-                
-            ]
-        },
-        {
-            stepTitle: "Step 2",
-            pageNumber: 2,
-            instructText: "Step 2 instructions...",
-            ingreds: [
-                { id: 'oil1', title: "1 tablespoon oil", imageSrc: "photos/icon2.PNG" },
-                { id: 'water1', title: "2 cups of water", imageSrc: "photos/icon1.PNG" },
-
-            ]
-        },
-        {
-            stepTitle: "Step 3",
-            pageNumber: 3,
-            instructText: "Step 3 instructions...",
-            ingreds: [
-            ]
-        },
-    ]
+function Instructions ({ CookingSteps,IngredientsList }){
     
     const [currentStepIndex, setCurrentStepIndex] = useState(0);
 
     const incrementStep = () => {
-        if (currentStepIndex < steps.length - 1) {
+        if (currentStepIndex < CookingSteps.length - 1) {
             setCurrentStepIndex(currentStepIndex + 1);
         }
     };
@@ -48,15 +17,14 @@ function Instructions (){
         }
     };
 
-    const currentStep = steps[currentStepIndex];
+    const currentStep = CookingSteps[currentStepIndex];
 
     const Ingredients = (
             <div id= "IngredientsTab">
                 <div id="ingredientsText">
-                    <li class="ingred">1/2lbs Flour</li>
-                    <li class="ingred">olive oil</li>
-                    <li class="ingred">1lbs provalone cheese</li>
-                    <li class="ingred">pizza sause</li>
+                {IngredientsList.map((ingredient, index) => (
+                    <li key={index} className="ingred">{ingredient}</li>
+                ))}
                 </div>
             </div>
         );

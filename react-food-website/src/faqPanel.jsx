@@ -1,7 +1,7 @@
 import React from "react"
 import './faqPanel.css';
 
-function FAQPanel(){
+function FAQPanel({FaQs}){
     return(
     <div id="mainContentContainer">
         
@@ -13,21 +13,14 @@ function FAQPanel(){
                     </div>
                 </div>
                 <div id="FAQText">
-                    <li class="FAQOption">how many people does this serve?</li>
-                    <p class="FAQAnswer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquam consequatur,
-                        recusandae voluptates doloremque incidunt, distinctio tempora aliquid.</p>
-                    <li class="FAQOption">Special Tools (affiliate links)</li>
-                    <p class="FAQAnswer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquam consequatur,
-                        recusandae voluptates doloremque incidunt, distinctio tempora aliquid.</p>
-                    <li class="FAQOption">Reheating and freezing</li>
-                    <p class="FAQAnswer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquam consequatur,
-                        recusandae voluptates doloremque incidunt, distinctio tempora aliquid.</p>
-                    <li class="FAQOption">ingredients options</li>
-                    <p class="FAQAnswer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquam consequatur,
-                        recusandae voluptates doloremque incidunt, distinctio tempora aliquid.</p>
+            {FaQs.map((faq, index) => (
+                <React.Fragment key={index}>
+                    <li className="FAQOption">{faq.question}</li>
+                    <p className="FAQAnswer">{faq.answer}</p>
+                </React.Fragment>
+            ))}
                 </div>
-
-            </div>
+        </div>
     </div>
     )}
 

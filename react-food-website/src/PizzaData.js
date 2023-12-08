@@ -1,11 +1,12 @@
 const PizzaData = {
+    id: "DeepDishPizza",
     //infoPanel
     title: "Deep Dish Pizza",
     cookingTime: "1hr",
     dishDescription: "Lorem ipsum dolor sit amet...",
     clockImg: "photos/icon3.PNG",
     //instructionPanel
-    steps: [
+    CookingSteps: [
         {
             stepTitle: "Step 1",
             pageNumber: 1,
@@ -35,16 +36,57 @@ const PizzaData = {
             ]
         },
     ],
-    ingred1: "1/2lbs Flour",
-    ingred2: "olive oil",
-    ingred3: "1lbs provalone cheese",
-    ingred4: "pizza sause",
+
+    IngredientsList: [
+        "1/2lbs Flour",
+        "olive oil",
+        "1lbs provalone cheese",
+        "pizza sause",
+    ],
     //faqPanel
-    answer1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquam consequatur,recusandae voluptates doloremque incidunt, distinctio tempora aliquid.",
-    answer2: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquam consequatur,recusandae voluptates doloremque incidunt, distinctio tempora aliquid.",
-    answer3: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquam consequatur,recusandae voluptates doloremque incidunt, distinctio tempora aliquid.",
-    answer4: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquam consequatur,recusandae voluptates doloremque incidunt, distinctio tempora aliquid.",
-    //
+    FaQs:[
+        {
+            question:"How many people does this serve?",
+            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquam consequatur,recusandae voluptates doloremque incidunt, distinctio tempora aliquid.",
+        },
+        {
+            question: "Special Tools (affiliate links)",
+            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquam consequatur,recusandae voluptates doloremque incidunt, distinctio tempora aliquid.",
+        },
+        {
+            question: "Reheating and freezing",
+            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit..."
+        },
+        {
+            question: "Ingredients options",
+            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit..."
+        },
+    ],
+
+    CommentsData: [
+        {
+            name: "exampleName1",
+            commentText: "First comment text...",
+            profilePicSrc: "photos/icon4.PNG",
+            rating: 5,
+            reviewPhoto: "photos/download.jpg",
+        },
+    
+        {
+            name: "exampleName2",
+            commentText: "second comment text...",
+            profilePicSrc: "photos/icon4.PNG",
+            rating: 4,
+        },
+    
+        {
+            name: "exampleName3",
+            commentText: "third comment text...",
+            profilePicSrc: "photos/icon4.PNG",
+            rating: 5,
+            reviewPhoto: "photos/example2.jpg",
+        },
+    ]
 }
 
 export default PizzaData;

@@ -1,19 +1,20 @@
-const pancakeData = {
+const PancakeData = {
+    id: "Pancakes",
     //infoPanel
-    title: "pancakes",
+    title: "Pancakes",
     cookingTime: "15 mins",
     dishDescription: "Lorem ipsum dolor sit amet...",
     clockImg: "photos/icon2.PNG",
     //instructionPanel
-    steps: [
+    CookingSteps: [
         {
             stepTitle: "Step 1",
             pageNumber: 1,
             instructText: "Step 1 instructions...",
             ingreds: [
-                { id: 'flour1', title: "1 Cup Flour", imageSrc: "photos/icon2.PNG" },
-                { id: 'sugar1', title: "1 1/2 teaspoon sugar", imageSrc: "photos/icon1.PNG" },
-                { id: 'flour2', title: "1 Cup Flour", imageSrc: "photos/icon2.PNG" },
+                { id: 'flour1', title: "1 Cup Flour", imageSrc: "photos/icon3.PNG" },
+                { id: 'sugar1', title: "1 cup sugar", imageSrc: "photos/icon2.PNG" },
+                { id: 'water1', title: "1 Cup Water", imageSrc: "photos/icon1.PNG" },
                 
             ]
         },
@@ -22,8 +23,8 @@ const pancakeData = {
             pageNumber: 2,
             instructText: "Step 2 instructions...",
             ingreds: [
-                { id: 'oil1', title: "1 tablespoon oil", imageSrc: "photos/icon2.PNG" },
-                { id: 'water1', title: "2 cups of water", imageSrc: "photos/icon1.PNG" },
+                { id: 'bakingPowder1', title: "1 tablespoon baking powder", imageSrc: "photos/icon1.PNG" },
+                { id: 'water2', title: "2 cups of water", imageSrc: "photos/icon3.PNG" },
 
             ]
         },
@@ -35,17 +36,56 @@ const pancakeData = {
             ]
         },
     ],
-    ingred1: "1/2lbs Flour",
-    ingred2: "water",
-    ingred3: "suger",
-    ingred4: "milk",
-    ingred5: "baking powder",
+
+    IngredientsList: [
+        "1/2lbs Flour",
+        "3 cups water",
+        "1 cup baking powder",
+    ],
     //faqPanel
-    answer1: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquam consequatur,recusandae voluptates doloremque incidunt, distinctio tempora aliquid.",
-    answer2: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquam consequatur,recusandae voluptates doloremque incidunt, distinctio tempora aliquid.",
-    answer3: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquam consequatur,recusandae voluptates doloremque incidunt, distinctio tempora aliquid.",
-    answer4: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquam consequatur,recusandae voluptates doloremque incidunt, distinctio tempora aliquid.",
-    //
+    FaQs:[
+        {
+            question:"How many people does this serve?",
+            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquam consequatur,recusandae voluptates doloremque incidunt, distinctio tempora aliquid.",
+        },
+        {
+            question: "Special Tools (affiliate links)",
+            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquam consequatur,recusandae voluptates doloremque incidunt, distinctio tempora aliquid.",
+        },
+        {
+            question: "Reheating and freezing",
+            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit..."
+        },
+        {
+            question: "Ingredients options",
+            answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit..."
+        },
+    ],
+
+    CommentsData: [
+        {
+            name: "exampleName1",
+            commentText: "First comment text...",
+            profilePicSrc: "photos/icon4.PNG",
+            rating: 5,
+            reviewPhoto: "photos/download.jpg",
+        },
+    
+        {
+            name: "exampleName2",
+            commentText: "second comment text...",
+            profilePicSrc: "photos/icon4.PNG",
+            rating: 4,
+        },
+    
+        {
+            name: "exampleName3",
+            commentText: "third comment text...",
+            profilePicSrc: "photos/icon4.PNG",
+            rating: 5,
+            reviewPhoto: "photos/example2.jpg",
+        },
+    ]
 }
 
-export default pancakeData;
+export default PancakeData;

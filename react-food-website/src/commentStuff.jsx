@@ -2,36 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './commentStuff.css'
 
-const commentsData = [
-    {
-        name: "exampleName1",
-        commentText: "First comment text...",
-        profilePicSrc: "photos/icon4.PNG",
-        rating: 5,
-        reviewPhoto: "photos/download.jpg",
-    },
-
-    {
-        name: "exampleName2",
-        commentText: "second comment text...",
-        profilePicSrc: "photos/icon4.PNG",
-        rating: 4,
-    },
-
-    {
-        name: "exampleName3",
-        commentText: "third comment text...",
-        profilePicSrc: "photos/icon4.PNG",
-        rating: 5,
-        reviewPhoto: "photos/example2.jpg",
-    },
-]
-
-function CommentPanel() {
+function CommentPanel({ recipeId, CommentsData }) {
     const [comments, setComments] = useState([]);
 
+    console.log("Recipe ID:", recipeId);
     useEffect(() => {
-        axios.get('http://localhost:3001/api/comments')
+        axios.get(`http://localhost:3001/api/comments/${recipeId}`)
             .then(response => setComments(response.data))
             .catch(error => console.error('Error fetching comments:', error));
     }, []);
@@ -39,7 +15,6 @@ function CommentPanel() {
     const [name, setName] = useState('');
     const [comment, setComment] = useState('');
     const [rating, setRating] = useState(0);
-    // Add states for other fields if needed
 
     const handleNameChange = (event) => {
         setName(event.target.value);
@@ -59,12 +34,12 @@ function CommentPanel() {
             name,
             commentText: comment,
             rating,
+            recipeId
         };
 
-        axios.post('http://localhost:3001/api/comments', newComment)
+        axios.post(`http://localhost:3001/api/comments/${recipeId}`, newComment)
             .then(response => setComments([...comments, response.data]))
             .catch(error => console.error('Error posting comment:', error));
-
         setName('');
         setComment('');
         setRating(0);
@@ -97,7 +72,7 @@ function CommentPanel() {
             <div id="commentsContainer">
                 <div id="comments">
 
-                    {commentsData.map((comment, index) => (
+                    {CommentsData.map((comment, index) => (
                         <div className="comment" key={index}>
                             <div className="topOfComment">
                                 <img src={comment.profilePicSrc} alt="" className="profilePic" />
