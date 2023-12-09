@@ -1,6 +1,5 @@
 import React from 'react';
 import PizzaData from './PizzaData';
-import PageTop from './pageTop';
 import Ad from './ad.jsx';
 import InfoPanel from './infoPanel';
 import Instructions from './instructionPanel';
@@ -10,8 +9,6 @@ import CommentPanel from './commentStuff';
 function PizzaPage({onBreakfastClick}){
     return(
         <div>
-            <PageTop
-            onBreakfastClick={onBreakfastClick}/>
             <InfoPanel
             title={PizzaData.title}
             cookingTime={PizzaData.cookingTime}
