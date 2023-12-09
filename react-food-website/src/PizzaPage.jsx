@@ -7,10 +7,11 @@ import Instructions from './instructionPanel';
 import FAQPanel from './faqPanel';
 import CommentPanel from './commentStuff';
 
-function PizzaPage(){
+function PizzaPage({onBreakfastClick}){
     return(
         <div>
-            <PageTop/>
+            <PageTop
+            onBreakfastClick={onBreakfastClick}/>
             <InfoPanel
             title={PizzaData.title}
             cookingTime={PizzaData.cookingTime}

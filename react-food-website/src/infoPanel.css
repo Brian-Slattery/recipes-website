@@ -105,10 +105,20 @@
     #titleAndTimeContainer{
         padding: 10px;
     }
+
 }
 
 @media (max-width:500px){
     #clockImage{
-        width: 70px;
+        width: 60px;
+        padding-left: 10px;
+    }
+
+    #title{
+        font-size: 45px;
+    }
+
+    #dropdownImageButton{
+        width: 30px;
     }
 }

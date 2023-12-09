@@ -45,13 +45,14 @@
     filter: drop-shadow(10px 10px 9px rgb(47, 64, 49));
 }
 
-#breakfastLink img, #lunchLink img,#dinnerLink img, #dessertLink img{
-    max-width: 70px;
+#breakfastContainer img, #dinnerContainer img,#lunchContainer img,#dessertContainer img{
+    max-width:70px;
     filter: drop-shadow(10px 10px 9px rgb(47, 64, 49));
     margin: 0%;
+    cursor: pointer;
 }
 
-#breakfastLink img:hover, #lunchLink img:hover,#dinnerLink img:hover, #dessertLink img:hover, #logoLink img:hover{
+#breakfastContainer img:hover, #lunchContainer img:hover,#dinnerContainer img:hover, #dessertContainer img:hover, #logoLink img:hover{
     filter: grayscale(0%);
 }
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './pageTop.css';
 
-function PageTop() {
+function PageTop({ onBreakfastClick, onDinnerClick }) {
 
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [backgroundImage, setBackgroundImage] = useState('normalBackground');
@@ -57,31 +57,23 @@ function PageTop() {
 
                     <div id="mealTypeButtonContainer">
 
-                        <div id="breakfastContainer">
-                            <a href="" id="breakfastLink">
+                        <div id="breakfastContainer" onClick={onBreakfastClick}>
                                 <img src="photos/icon1.PNG" alt="breakfast" />
-                            </a>
                             <p class="iconTitles">Breakfast</p>
                         </div>
 
                         <div id="lunchContainer">
-                            <a href="" id="lunchLink">
                                 <img src="photos/icon2.PNG" alt="lunch" />
-                            </a>
                             <p class="iconTitles">Lunch</p>
                         </div>
 
-                        <div id="dinnerContainer">
-                            <a href="" id="dinnerLink">
+                        <div id="dinnerContainer" onClick={onDinnerClick}>
                                 <img src="photos/icon3.PNG" alt="dinner" />
-                            </a>
                             <p class="iconTitles">Dinner</p>
                         </div>
 
                         <div id="dessertContainer">
-                            <a href="" id="dessertLink">
                                 <img src="photos/icon4.PNG" alt="dessert" />
-                            </a>
                             <p class="iconTitles">Dessert</p>
                         </div>
                     </div>
